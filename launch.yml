@@ -1,0 +1,15 @@
+## To launch an EC2 instance
+
+- name: Ansible Launch
+  hosts: localhost
+  collections:
+    - amazon.aws
+  tasks:
+    - name: Launch an EC2 instance
+      amazon.aws.ec2_instance:
+        key_name: key-ansible
+        region: us-east-1
+        instance_type: t2.micro
+        image_id: ami-0e86e20dae9224db8
+        tags:
+          Name: slave-node

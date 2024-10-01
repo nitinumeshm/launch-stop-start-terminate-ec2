@@ -1,0 +1,13 @@
+## To stop an already launched EC2 instance
+
+- name: Ansible Stop
+  hosts: localhost
+  collections:
+    - amazon.aws
+  tasks:
+    - name: Stop a running EC2 instance
+      amazon.aws.ec2_instance:
+        state: stopped
+        region: us-east-1
+        filters:
+          "tag:Name": slave-node

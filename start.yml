@@ -1,0 +1,13 @@
+## To start an EC2 instance
+
+- name: Ansible Start
+  hosts: localhost
+  collections:
+    - amazon.aws
+  tasks:
+    - name: Start an EC2 instance
+      amazon.aws.ec2_instance:
+        state: running
+        region: us-east-1
+        filters:
+          "tag:Name": slave-node

@@ -1,0 +1,13 @@
+## To terminate an EC2 instance
+
+- name: Ansible Terminate
+  hosts: localhost
+  collections:
+    - amazon.aws
+  tasks:
+    - name: Terminate an EC2 instance
+      amazon.aws.ec2_instance:
+        state: terminated
+        region: us-east-1
+        filters:
+          "tag:Name": slave-node
