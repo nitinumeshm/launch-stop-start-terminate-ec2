@@ -3,11 +3,11 @@
 1. Launch an ubuntu EC2 instance where you are going to install ansible
     - Name this instance as "master-node"
     - Install steps for ansible (derived from official ansible documentation) <br>
-        -- *sudo apt update* <br>
-        -- *sudo apt install software-properties-common* <br>
-        -- *sudo add-apt-repository --yes --update ppa:ansible/ansible* <br>
-        -- *sudo apt install ansible* <br>
-        -- *ansible --version* <br>
+        * *sudo apt update* <br>
+        * *sudo apt install software-properties-common* <br>
+        * *sudo add-apt-repository --yes --update ppa:ansible/ansible* <br>
+        * *sudo apt install ansible* <br>
+        * *ansible --version* <br>
    
 2. Create an IAM Role with EC2 full access, and attach this role to EC2 instance "master-node"
     - Go to **IAM > Roles > Create Role**
@@ -24,9 +24,9 @@
     - **terminate.yml**: To terminate an EC2 instance
 
 4. Run following commands
-    - To verify syntax of the playbooks
-        *ansible-playbook --syntax-check <playbook-file>*
-    - To do a dry run of the playbooks
-        *ansible-playbok -C <playbook-file>*
-    - To run the pplaybooks
-        *ansible-playbook <playbook-file>*
+    - To verify syntax of the playbooks <br>
+        * *ansible-playbook --syntax-check playbook-file* <br>
+    - To do a dry run of the playbooks <br>
+        * *ansible-playbok -C playbook-file* <br>
+    - To run the pplaybooks <br>
+        * *ansible-playbook playbook-file* <br>
